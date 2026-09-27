@@ -1,0 +1,235 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+html:has(.app--full) {
+  scrollbar-gutter: auto;
+}
+
+.app {
+  --app-bar: calc(var(--tap) + var(--s-2));
+  --app-rail: 88px;
+  --app-banner: var(--tap);
+  --app-pad: calc(var(--app-bar) + env(safe-area-inset-bottom, 0px));
+}
+
+.app--banner {
+  --app-pad: calc(var(--app-bar) + var(--app-banner) + env(safe-area-inset-bottom, 0px));
+}
+
+/* Screens own their top and side safe-area gutters; the shell only clears its own bar, rail and banner. */
+.app__main {
+  padding-bottom: var(--app-pad);
+}
+
+.app--full .app__main {
+  padding: 0;
+}
+
+.app-splash {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  color: var(--ink);
+}
+
+/* Coming soon: one white title band across the ground. */
+.app-soon {
+  display: grid;
+  align-content: center;
+  min-height: calc(100dvh - var(--app-pad));
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.app-soon__band {
+  padding: var(--s-7) var(--s-5);
+  background: var(--paper);
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.app-soon__title {
+  margin: 0 0 var(--s-3);
+  font: var(--t-h2);
+}
+
+.app-soon__text {
+  max-width: 40ch;
+  margin: 0 auto;
+  font: var(--t-body);
+}
+
+/* Open-session band, docked above the tab bar. */
+.app-banner {
+  position: fixed;
+  inset: auto 0 calc(var(--app-bar) + env(safe-area-inset-bottom, 0px)) 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  height: var(--app-banner);
+  padding: 0 calc(var(--s-4) + env(safe-area-inset-right, 0px)) 0 calc(var(--s-4) + env(safe-area-inset-left, 0px));
+  background: var(--g-unclassified-pattern), var(--g-unclassified);
+  color: var(--g-unclassified-on);
+  font: var(--t-label);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-banner:focus-visible {
+  outline: 3px solid var(--ground);
+  outline-offset: -6px;
+}
+
+.app-banner__what {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  min-width: 0;
+}
+
+.app-banner__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-banner__what > :not(.app-banner__title),
+.app-banner__go {
+  flex-shrink: 0;
+}
+
+.app-banner__go {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+/* Tab bar on phones, rail from 720px. */
+.app-nav {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 10;
+  padding: 0 env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  background: var(--ground);
+  border-top: 1px solid var(--rule);
+}
+
+.app-nav__mark {
+  display: none;
+}
+
+.app-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-nav__list > li {
+  flex: 1;
+}
+
+.app-nav__tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-1);
+  height: var(--app-bar);
+  color: var(--ink-2);
+  font: var(--t-fact);
+  text-decoration: none;
+  transition: color var(--dur-1) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-nav__tab:focus-visible {
+  outline-offset: -4px;
+}
+
+.app-nav__tab[aria-current='page'] {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.app-nav__tab[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  inset: -1px 0 auto;
+  border-top: 3px solid var(--ink);
+}
+
+@media (hover: hover) {
+  .app-nav__tab:hover {
+    color: var(--ink);
+  }
+}
+
+@media (min-width: 720px) {
+  .app {
+    --app-pad: 0px;
+  }
+
+  .app--banner {
+    --app-pad: var(--app-banner);
+  }
+
+  .app__main {
+    padding-left: calc(var(--app-rail) + env(safe-area-inset-left, 0px));
+  }
+
+  .app-banner {
+    left: calc(var(--app-rail) + env(safe-area-inset-left, 0px));
+    bottom: 0;
+    padding-left: var(--s-5);
+  }
+
+  .app-nav {
+    inset: 0 auto 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-6);
+    width: calc(var(--app-rail) + env(safe-area-inset-left, 0px));
+    padding: calc(var(--s-5) + env(safe-area-inset-top, 0px)) 0 var(--s-5) env(safe-area-inset-left, 0px);
+    border-top: 0;
+    border-right: 1px solid var(--rule);
+  }
+
+  .app-nav__mark {
+    display: block;
+    color: var(--ink);
+    line-height: 0;
+  }
+
+  .app-nav__list {
+    flex-direction: column;
+    gap: var(--s-2);
+    width: 100%;
+  }
+
+  .app-nav__tab {
+    height: var(--s-8);
+  }
+
+  .app-nav__tab[aria-current='page']::before {
+    inset: 0 var(--s-5) auto;
+  }
+}
+
+.app-alert {
+  margin: 0;
+  padding: var(--s-3) max(var(--s-4), env(safe-area-inset-right, 0px)) var(--s-3) max(var(--s-4), env(safe-area-inset-left, 0px));
+  background: var(--g-thriller);
+  color: var(--g-thriller-on);
+  font: var(--t-label);
+}
+
+@media (max-width: 719px) {
+  html {
+    scroll-padding-bottom: calc(var(--tap) + var(--s-2) + var(--tap) + env(safe-area-inset-bottom, 0px));
+  }
+}

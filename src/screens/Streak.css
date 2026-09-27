@@ -1,0 +1,141 @@
+.streak {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: var(--s-5);
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  padding:
+    max(var(--s-4), env(safe-area-inset-top))
+    max(var(--s-4), env(safe-area-inset-right))
+    var(--s-7)
+    max(var(--s-4), env(safe-area-inset-left));
+}
+
+/* Keeps each day's target at least 24px wide on 360px phones. */
+@media (max-width: 367px) {
+  .streak {
+    padding-inline: max(var(--s-3), env(safe-area-inset-left)) max(var(--s-3), env(safe-area-inset-right));
+  }
+}
+
+.streak__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--s-2);
+}
+
+.streak__back,
+.streak__step {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Lines the chevron up with the page's left edge while the target stays 48px. */
+.streak__back {
+  margin-inline-start: calc(-1 * var(--s-3));
+}
+
+.streak__back:active,
+.streak__step:active:not([aria-disabled='true']) {
+  background: var(--ground-2);
+}
+
+.streak__step[aria-disabled='true'] {
+  color: var(--ink-3);
+  cursor: default;
+}
+
+/* The title never wraps; on a narrow phone the year switcher drops to its own line instead. */
+.streak__title {
+  flex: 1 0 auto;
+  margin: 0;
+  font: var(--t-h2);
+}
+
+/* Focused by script on arrival only; it isn't a control. */
+.streak__title:focus-visible {
+  outline: none;
+}
+
+.streak__years {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+}
+
+.streak__year {
+  min-width: 4ch;
+  font: var(--t-label);
+  text-align: center;
+}
+
+/* The streak on a white title band. */
+.streak__band {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-5);
+  background: var(--paper);
+}
+
+.streak__count,
+.streak__first,
+.streak__ember,
+.streak__facts {
+  margin: 0;
+}
+
+.streak__count {
+  font: var(--t-title);
+}
+
+.streak__first {
+  max-width: 24ch;
+  font: var(--t-h2);
+  text-wrap: balance;
+}
+
+.streak__ember {
+  font: var(--t-label);
+}
+
+.streak__facts {
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+/* Lines break only between facts. */
+.streak__fact {
+  white-space: nowrap;
+}
+
+@media (min-width: 960px) {
+  .streak {
+    max-width: 1080px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+    grid-template-areas:
+      'head head'
+      'shelves band'
+      'shelves card';
+    grid-template-rows: auto auto 1fr;
+    column-gap: var(--s-7);
+    align-items: start;
+    padding-top: max(var(--s-6), env(safe-area-inset-top));
+  }
+
+  .streak__head { grid-area: head; }
+
+  .streak > .ys { grid-area: shelves; }
+  .streak__band { grid-area: band; }
+  .streak > .daycard { grid-area: card; }
+}

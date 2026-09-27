@@ -1,0 +1,67 @@
+.band {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0 var(--s-5);
+  border: 0;
+  border-radius: 0;
+  background: var(--band-pattern, none), var(--band, var(--g-unclassified));
+  color: var(--band-on, var(--g-unclassified-on));
+  text-align: left;
+  transition: background var(--dur-1) var(--ease-out), color var(--dur-1) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.band:active:not(:disabled) {
+  background: var(--band-pattern, none), var(--band-deep, var(--g-unclassified-deep));
+  color: var(--band-deep-on, var(--g-unclassified-deep-on));
+}
+
+.band:focus-visible {
+  outline: 3px solid var(--band-on, var(--g-unclassified-on));
+  outline-offset: -7px;
+}
+
+.band[aria-pressed='true'] {
+  box-shadow: inset 0 0 0 3px var(--band-on, var(--g-unclassified-on));
+}
+
+.band:disabled {
+  background: var(--ground-2);
+  color: var(--ink-3);
+  cursor: not-allowed;
+}
+
+.band__content {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  width: 100%;
+  font: var(--t-label);
+}
+
+.band--hero {
+  min-height: var(--band-h);
+}
+
+.band--hero .band__content {
+  font: var(--t-band);
+  letter-spacing: 0.01em;
+}
+
+.band__rule {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: var(--band-deep, var(--g-unclassified-deep));
+  overflow: hidden;
+}
+
+.band__fill {
+  display: block;
+  height: 100%;
+  background: var(--band-accent, var(--g-unclassified-accent));
+  transform-origin: left center;
+  transition: transform var(--dur-4) var(--ease-out);
+}

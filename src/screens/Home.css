@@ -1,0 +1,94 @@
+.home {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: var(--s-5);
+  width: 100%;
+  /* Keeps the single-column cover book-shaped on tablets. */
+  max-width: 480px;
+  margin-inline: auto;
+  padding:
+    max(var(--s-4), env(safe-area-inset-top))
+    max(var(--s-4), env(safe-area-inset-right))
+    var(--s-7)
+    max(var(--s-4), env(safe-area-inset-left));
+}
+
+.home__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: max(360px, 100svh - 264px);
+}
+
+@media (min-width: 720px) {
+  .home__skeleton {
+    min-height: clamp(360px, min(68svh, 100svh - 264px), 640px);
+  }
+}
+
+.home__skeleton > span {
+  background: var(--ground-2);
+}
+
+.home__skeleton > span:nth-child(odd) {
+  flex: 1 1 0;
+  min-height: var(--band-h);
+}
+
+.home__skeleton > span:nth-child(2) {
+  flex: 0 0 180px;
+}
+
+@media (min-width: 960px) {
+  .home {
+    max-width: 1080px;
+    grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+    /* The cover spans every row, so the two 1fr rows share its spare height and the reader line lands on its bottom edge. */
+    grid-template-rows: auto 1fr auto 1fr auto;
+    grid-template-areas:
+      'cover goal'
+      'cover .'
+      'cover week'
+      'cover .'
+      'cover reader';
+    column-gap: var(--s-7);
+    align-items: start;
+    padding-top: max(var(--s-6), env(safe-area-inset-top));
+    /* Matches the cover's 100svh - --s-8 sizing so a short window does not scroll. */
+    padding-bottom: var(--s-6);
+  }
+
+  .home--shelf {
+    grid-template-rows: auto auto 1fr auto 1fr auto;
+    grid-template-areas:
+      'cover strip'
+      'cover goal'
+      'cover .'
+      'cover week'
+      'cover .'
+      'cover reader';
+  }
+
+  /* The progress column steps up a size to read at the cover's scale. */
+  .home > .week-spines {
+    --t-h2: 700 clamp(1.75rem, 0.75rem + 1.6vw, 2.25rem)/1.1 var(--font);
+  }
+
+  .home > .week-spines,
+  .home > .reader-number {
+    --t-fact: 500 1rem/1.35 var(--font);
+  }
+
+  .home > .spine-strip { grid-area: strip; }
+  .home > .cover,
+  .home > .home__skeleton { grid-area: cover; }
+  .home > .goal-band { grid-area: goal; }
+  .home > .week-spines { grid-area: week; }
+  .home > .reader-number { grid-area: reader; }
+
+  .home__skeleton {
+    min-height: auto;
+    aspect-ratio: 11 / 18;
+  }
+}

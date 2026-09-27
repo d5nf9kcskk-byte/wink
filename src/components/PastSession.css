@@ -1,0 +1,148 @@
+.past {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+}
+
+.past__day {
+  margin: 0;
+  font: var(--t-h2);
+}
+
+.past__guide {
+  max-width: 40ch;
+  margin: 0;
+  font: var(--t-body);
+}
+
+.past__set {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.past__label {
+  display: block;
+  margin: 0 0 var(--s-2);
+  padding: 0;
+  font: var(--t-label);
+}
+
+.past__books {
+  display: grid;
+  gap: var(--s-2);
+}
+
+.past__book {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 56px;
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--ink-3);
+  border-radius: var(--radius);
+  background: var(--paper);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Selected is a ring and a check, never the ink alone. */
+.past__book:has(:checked) {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
+.past__book:has(:focus-visible) {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.past__chip {
+  align-self: stretch;
+  min-height: 40px;
+  background: var(--band-pattern, none), var(--band);
+  box-shadow: inset 0 0 0 1px var(--band-accent);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.past__text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.past__title {
+  font: var(--t-label);
+  overflow-wrap: anywhere;
+}
+
+.past__meta,
+.past__hint {
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+.past__check {
+  visibility: hidden;
+}
+
+.past__book:has(:checked) .past__check {
+  visibility: visible;
+}
+
+.past__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4) var(--s-5);
+}
+
+.past__input {
+  min-height: var(--tap);
+  padding: var(--s-1) var(--s-3);
+  border: 1px solid var(--ink-3);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font: var(--t-label);
+  font-variant-numeric: tabular-nums;
+}
+
+.past__stepper,
+.past__pageline {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.past__minutes {
+  width: calc(3ch + 2 * var(--s-3) + 2px);
+  text-align: center;
+}
+
+.past__page {
+  width: calc(5ch + 2 * var(--s-3) + 2px);
+}
+
+.past__step {
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper);
+  transition: background var(--dur-1) var(--ease-out), color var(--dur-1) var(--ease-out);
+}
+
+.past__step:active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.past__error {
+  margin: 0;
+  font: var(--t-label);
+  color: var(--danger);
+}

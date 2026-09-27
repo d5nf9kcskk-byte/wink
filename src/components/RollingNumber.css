@@ -1,0 +1,43 @@
+.roll {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.roll__glyphs {
+  display: inline-flex;
+}
+
+.roll__slot {
+  position: relative;
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.roll__sizer {
+  visibility: hidden;
+}
+
+.roll__reel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--dur-3) var(--ease-out);
+}
+
+.roll__static {
+  white-space: pre;
+}
+
+.roll__sizer,
+.roll__reel > span,
+.roll__static {
+  display: block;
+  height: 1em;
+  line-height: 1;
+}

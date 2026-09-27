@@ -1,0 +1,69 @@
+.starrating {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  text-align: center;
+}
+
+.starrating__legend {
+  padding: 0;
+  margin: 0 auto var(--s-3);
+  font: var(--t-label);
+}
+
+.starrating__stars {
+  display: flex;
+  justify-content: center;
+}
+
+.starrating__star {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+}
+
+.starrating__icon {
+  grid-area: 1 / 1;
+}
+
+.starrating__fill {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--dur-2) var(--ease-out);
+}
+
+.starrating__star[data-fill='half'] .starrating__fill {
+  clip-path: inset(0 50% 0 0);
+}
+
+.starrating__star[data-fill='full'] .starrating__fill {
+  clip-path: inset(0);
+}
+
+.starrating__half {
+  position: absolute;
+  inset-block: 0;
+  width: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.starrating__half--left {
+  inset-inline-start: 0;
+}
+
+.starrating__half--right {
+  inset-inline-end: 0;
+}
+
+.starrating__half:has(:focus-visible) {
+  outline: 3px solid currentColor;
+  outline-offset: -3px;
+}
+
+.starrating__value {
+  margin: var(--s-2) 0 0;
+  font: var(--t-fact);
+}

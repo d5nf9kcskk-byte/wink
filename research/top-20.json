@@ -1,0 +1,162 @@
+[
+  {
+    "rank": 1,
+    "title": "Motion Intensity Control",
+    "category": "Onboarding & signature animations",
+    "description": "A single Full / Reduced / Off toggle scales the amplitude and duration of every signature animation app-wide, and defaults to Reduced automatically when the OS's prefers-reduced-motion is set.",
+    "why_it_wins": "Near-perfect across all three dimensions (10/9/10) \u2014 it's the governor that makes an animation-heavy app trustworthy instead of exhausting, and costs almost nothing to build (one CSS token plus a native media query). It's the load-bearing feature that makes every other animation idea on this list safe to ship.",
+    "animation_idea": "Toggling the setting live-previews itself: the row's own icon does a big spring-bounce on Full and a 40ms nudge on Reduced, so the choice is felt instantly."
+  },
+  {
+    "rank": 2,
+    "title": "Two-Layer Spoiler-Safe Reviews",
+    "category": "Ratings, reviews & reflection",
+    "description": "The review composer has two boxes: a spoiler-free teaser always visible, and an optional full-thoughts section rendered blurred behind a tap-to-reveal overlay. Readers who haven't finished the book only ever see the teaser by default.",
+    "why_it_wins": "Solves one of the most widely complained-about problems in reading communities with a familiar mental model and near-zero build cost \u2014 two textareas and a CSS blur reveal (9/9/10).",
+    "animation_idea": "Tapping reveal wipes the blur away like fog clearing off glass, radiating out from the exact point tapped."
+  },
+  {
+    "rank": 3,
+    "title": "Because You Loved Rows",
+    "category": "Recommendations & discovery",
+    "description": "Horizontally scrolling Discover carousels, each explicitly anchored to one specific 5-star book from the user's history ('Because you loved Circe\u2026'), reordering over time toward the anchors the model is most confident in.",
+    "why_it_wins": "The Netflix/Spotify pattern readers already know instantly, turning an opaque recommendation engine into a legible, credible one \u2014 buildable from simple content-based filtering on data Wink already owns (9/9/9).",
+    "animation_idea": "Covers glide in from the right with a light stagger on load, and the anchor book's thumbnail pulses once to show 'why' this row exists."
+  },
+  {
+    "rank": 4,
+    "title": "Quote Keeper Cards",
+    "category": "Ratings, reviews & reflection",
+    "description": "A save-a-line button on the reflection screen turns a typed quote plus page number into a shareable image card \u2014 blurred cover background, large-type quote, star rating as a corner badge \u2014 ready to save or post.",
+    "why_it_wins": "Plugs directly into existing bookstagram/quote-sharing culture with a trivial, self-contained build and zero copyright risk since it's the reader's own words, not reproduced book text (9/9/9).",
+    "animation_idea": "The card does a 3D flip from blank rectangle to finished design, landing with a soft bounce."
+  },
+  {
+    "rank": 5,
+    "title": "Cover-Colored Finish Celebration",
+    "category": "Gamification, badges & rewards",
+    "description": "Marking a book finished triggers a confetti/particle burst whose palette is extracted live from that book's own cover art, so a dark thriller bursts moody red/black and a bright YA cover bursts pastel.",
+    "why_it_wins": "Rides an action the user is already taking with zero extra steps, and per-book personalization is exactly the kind of detail users call out as delightful in comparable apps (10/8/9).",
+    "animation_idea": "Canvas-based color extraction from the cover feeds a particle burst that explodes outward from the book the instant Finished is tapped."
+  },
+  {
+    "rank": 6,
+    "title": "Grace-Period Streak with Auto-Repair Tokens",
+    "category": "Habits, reminders & notifications",
+    "description": "A daily streak that only requires opening a book and reading one page; a missed day dims the flame to an amber 'ember' for 24h instead of zeroing it, and free repair tokens \u2014 never sold, never monetized \u2014 earned every 5 reading days auto-heal one missed day. Merges the two top-scoring streak concepts in the research into one mechanic.",
+    "why_it_wins": "Directly fixes Duolingo's most-criticized flaw (the punitive, monetized streak-freeze upsell) with a mechanic proven at massive scale to cut churn, entirely client-side state logic (9/8-9/9).",
+    "animation_idea": "The flame cools to an amber ember-glow on a miss, then flares back to full color with a heat-shimmer the instant a repair token auto-applies."
+  },
+  {
+    "rank": 7,
+    "title": "Finish-Line Reflection Card with Vibe Tags",
+    "category": "Ratings, reviews & reflection",
+    "description": "Finishing a book slides up a 15-second ritual: a gut-reaction chip, up to three mood/pace vibe tags (cozy, unputdownable, slow-burn\u2026), a favorite-line field, and a recommend toggle, auto-composing into a shareable card with stars animating in one by one. Merges the reflection-card and vibe-tag ideas into one guided moment.",
+    "why_it_wins": "Replaces the intimidating blank review box with guided taps proven in apps like StoryGraph and Letterboxd, and the tags double as texture that quietly sharpens future recommendations (9/8/9).",
+    "animation_idea": "Each tap snaps a chip into place like a puzzle piece, and the five stars pop in left-to-right with a small overshoot bounce before the share card assembles."
+  },
+  {
+    "rank": 8,
+    "title": "One-Tap Start Reading with a Live Pace Ring",
+    "category": "Reading tracking & sessions",
+    "description": "Tapping Start Reading opens a full-screen timer with a circular progress ring that fills as minutes pass; ending the session asks only for the page stopped on \u2014 a 3-tap total logging loop.",
+    "why_it_wins": "Attacks reading trackers' number-one complaint, manual-entry friction, while the ring gives passive, rewarding feedback without adding a single extra tap (9/8/9).",
+    "animation_idea": "The ring sweeps clockwise in real time via a CSS conic-gradient, giving a small pulse every 5 minutes to mark milestones."
+  },
+  {
+    "rank": 9,
+    "title": "Backfill a Past Session",
+    "category": "Reading tracking & sessions",
+    "description": "A '+ Log a session' option opens a lightweight form (start time, duration or page range, format) for reading that happened without the timer running \u2014 on a plane, from a library book, or simply forgotten.",
+    "why_it_wins": "The essential escape hatch for the timer-based core loop; without it, users lose credit for real reading and stop trusting the tracker, and it's the simplest form in the whole set to build (7/9/10).",
+    "animation_idea": "The submitted session flies from the form into its book's progress bar, which ticks forward to match on arrival."
+  },
+  {
+    "rank": 10,
+    "title": "Smart Format-Aware Progress & Pace Estimate",
+    "category": "Reading tracking & sessions",
+    "description": "Each currently-reading book's progress bar renders in the unit its format's readers actually think in \u2014 pages for ebook/physical, time-remaining for audiobook \u2014 with a line underneath reading '~2 more sessions at your pace,' computed from the reader's own historical speed. Merges the format-aware bar and personal pace-estimate ideas.",
+    "why_it_wins": "Combines two zero-friction, purely-informational display upgrades that make Wink's own logging data feel personally useful instead of generic, with no new data source needed (9/8/9).",
+    "animation_idea": "The bar's fill and the pace-estimate text both count up together the moment a session is logged."
+  },
+  {
+    "rank": 11,
+    "title": "TBR Priority Queue",
+    "category": "Library & organization",
+    "description": "The Want to Read shelf becomes a drag-to-reorder vertical stack instead of an unordered pile; the top slot carries a crown badge marking the literal 'read next' book.",
+    "why_it_wins": "Fixes a widely-named competitor complaint (no visible order on TBR lists) with a universally-understood drag-to-reorder pattern that gets used daily, not just admired once (9/8/9).",
+    "animation_idea": "Dragging a cover up the stack triggers the other covers to reflow and resettle with a soft spring bounce."
+  },
+  {
+    "rank": 12,
+    "title": "DNF Shelf with Reason Tags",
+    "category": "Library & organization",
+    "description": "A dedicated Didn't Finish shelf, separate from Read/Reading/Want-to-Read; abandoning a book prompts one-tap reason chips ('pacing,' 'not my mood,' 'wrong time,' 'DNF forever') and the book gets a distinct grey ribbon instead of vanishing. Merges the two DNF concepts from the research into one shelf-plus-reason feature.",
+    "why_it_wins": "Closes a named competitor gap with near-zero added friction since it rides the exact moment a user is already abandoning a book, and the structured reasons quietly sharpen future recommendations (9/8/9-10).",
+    "animation_idea": "Swiping a book to DNF drapes a grey ribbon across the cover with a quick cloth-drop settle."
+  },
+  {
+    "rank": 13,
+    "title": "Match Score Ring",
+    "category": "Recommendations & discovery",
+    "description": "Every book cover in Discover shows a small percentage ring ('87% match') that fills clockwise on hover or tap, computed from the user's own rating history; tapping expands a one-line 'why' (genre overlap, similar pacing, authors loved).",
+    "why_it_wins": "Makes an otherwise opaque recommendation engine always-visible and explainable, built entirely from data Wink already has with no ML infrastructure (9/8/9).",
+    "animation_idea": "The ring fills clockwise via SVG stroke-dashoffset on tap, and the 'why' line slides out beneath it."
+  },
+  {
+    "rank": 14,
+    "title": "Blind Date With a Book",
+    "category": "Recommendations & discovery",
+    "description": "A single mystery card on Discover shown wrapped and silhouetted with only a mood tag and one-line teaser, matched to the user's taste profile but hiding title, cover, and author until tapped.",
+    "why_it_wins": "Mirrors a beloved real-world indie-bookstore ritual with one obvious tap target and zero decision paralysis, reusing the same taste-matching logic as other recommendation features (9/8/9).",
+    "animation_idea": "Tapping triggers a wrap-tear reveal before the full book detail fades in underneath."
+  },
+  {
+    "rank": 15,
+    "title": "One-Tap Nice Read",
+    "category": "Social & community",
+    "description": "A single heart/thumbs tap on a friend's finished book or shelf update, shown as a small burst animation with a running count \u2014 no comment box, no required text \u2014 and off by default on any shelf its owner marks private.",
+    "why_it_wins": "The lowest-friction social affirmation possible, costing the giver nothing while giving the receiver a small dopamine hit without inviting stat-shaming; also the one social feature light enough to run on a small, GitHub-hosted app's backend rather than needing real-time infrastructure (9/8/9).",
+    "animation_idea": "The tap fires a small heart-burst that scales up and fades while the count ticks up by one beside it."
+  },
+  {
+    "rank": 16,
+    "title": "Depth-Weighted Leveling (XP Bar)",
+    "category": "Gamification, badges & rewards",
+    "description": "An animated 'Level 14 Reader' XP bar on the home screen where XP scales with pages or minutes read rather than a flat book-count, so a 900-page novel visibly outweighs a novella; leveling up triggers a full-screen burst.",
+    "why_it_wins": "Solves a real fairness problem sharp users notice in cruder point systems (novella-grinding for badges) while reusing a proven, well-liked milestone-animation payoff pattern (9/8/9).",
+    "animation_idea": "The bar fills with a smooth sweep after each session, and hitting a new level flashes the screen and spins a badge into place."
+  },
+  {
+    "rank": 17,
+    "title": "In-App Animated Weekly Recap",
+    "category": "Habits, reminders & notifications",
+    "description": "Every Friday evening a card animates onto the home screen summarizing the week \u2014 pages, minutes, books advanced, mood-tag trend \u2014 ending on a one-tap 'share as image' button, living entirely in-app so it can't get buried in an inbox.",
+    "why_it_wins": "Recap formats are proven beloved (see the enthusiasm for year-end reading wraps), and keeping it in-app on a reliable cadence fixes the real failure mode of email-based recaps getting lost, with no server round-trip needed (9/8/9).",
+    "animation_idea": "The card slides on with a page-turn transition and each stat counts up before settling."
+  },
+  {
+    "rank": 18,
+    "title": "Daily Goal Progress Ring",
+    "category": "Habits, reminders & notifications",
+    "description": "The dashboard shows a circular ring (pages or minutes, user's choice) that fills with a smooth animated sweep as sessions are logged and resets quietly at midnight with no punitive state; tapping it opens a lightweight goal-adjustment slider.",
+    "why_it_wins": "Borrows the universally-loved Apple Activity Rings mental model with a non-punitive reset, giving a satisfying dopamine hit every single session and compounding naturally with the weekly recap above (9/8/9).",
+    "animation_idea": "The ring sweeps forward live as a session logs, and tapping it springs open a slider while the ring itself scales up slightly to frame the adjustment."
+  },
+  {
+    "rank": 19,
+    "title": "Two-Tier Spoiler Shield",
+    "category": "Search & book detail page",
+    "description": "The detail page shows a short spoiler-free blurb by default with a height-animated 'Read more' accordion for the full synopsis, plus reviews tagged by how far into the book they discuss \u2014 rendered blurred with 'tap to reveal anyway' if the current user hasn't reached that point in their own reading log. Merges the expandable-synopsis and progress-aware review-blur ideas into one spoiler-safety layer.",
+    "why_it_wins": "Solves a constant, real annoyance for browsers \u2014 spoiler-phobic readers vs. plot-summary seekers \u2014 across both the synopsis and the crowd reviews with pure front-end logic and no new data source.",
+    "animation_idea": "The synopsis accordion height-animates open on tap, and a shielded review clears from blur to focus right where it sits."
+  },
+  {
+    "rank": 20,
+    "title": "Free & Indie-First Acquisition Panel",
+    "category": "Acquisition & pricing",
+    "description": "The acquisition panel automatically flags public-domain titles with a 'Free & legal' badge linking to Standard Ebooks/Project Gutenberg text and LibriVox audio, and for physical copies defaults to Bookshop.org pricing \u2014 with an optional 'pick your store' step crediting a specific indie shop \u2014 instead of jumping straight to Amazon. Merges the public-domain and indie-bookstore ideas into the one acquisition feature actually buildable end-to-end.",
+    "why_it_wins": "Delivers on the core promise of surfacing the cheapest-or-free option using real, free, legitimate public APIs (Gutenberg, Standard Ebooks, LibriVox, Bookshop.org's affiliate program), unlike most other acquisition ideas in the research which are blocked by closed retailer APIs or scraping risk.",
+    "animation_idea": "A 'Free & legal' badge stamps onto the cover with a small ink-thunk, and picking an indie store drops a map-pin marker onto a short list with a soft bounce."
+  }
+]

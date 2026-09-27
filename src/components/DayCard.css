@@ -1,0 +1,89 @@
+.daycard {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* A tap on the shelves scrolls the card up clear of the tab bar and banner. */
+  scroll-margin-bottom: calc(var(--app-pad, 0px) + var(--s-4));
+}
+
+.daycard__band {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-4) var(--s-5);
+  background: var(--band-pattern, none), var(--band);
+  color: var(--band-on);
+}
+
+.daycard__date,
+.daycard__how {
+  margin: 0;
+}
+
+.daycard__how {
+  font: var(--t-label);
+}
+
+.daycard__page {
+  display: grid;
+  gap: var(--s-4);
+  padding: var(--s-5);
+  background: var(--paper);
+}
+
+.daycard__books {
+  display: grid;
+  gap: var(--s-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.daycard__book {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr);
+  gap: var(--s-3);
+}
+
+/* A mini spine: a thin rule in the book's accent. */
+.daycard__chip {
+  min-height: 44px;
+  background: var(--band-pattern, none), var(--band);
+  box-shadow: inset 0 0 0 1px var(--band-accent);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.daycard__text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.daycard__title {
+  font: var(--t-label);
+  overflow-wrap: anywhere;
+}
+
+.daycard__author,
+.daycard__total,
+.daycard__empty {
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+.daycard__facts {
+  margin-top: var(--s-1);
+  font: var(--t-fact);
+}
+
+.daycard__total {
+  margin: 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+.daycard__empty {
+  margin: 0;
+  font: var(--t-body);
+}

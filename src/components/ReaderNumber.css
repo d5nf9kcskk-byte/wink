@@ -1,0 +1,163 @@
+.reader-number {
+  position: relative;
+  display: grid;
+  gap: var(--s-2);
+  /* The stop chain scrolls this line into view; the margin clears the tab bar and session banner. */
+  scroll-margin-bottom: calc(var(--app-pad, 0px) + var(--s-4));
+}
+
+.reader-number__name {
+  margin: 0;
+  font: var(--t-label);
+}
+
+/* The heading's button; its ::after stretches over the whole line so the rule and fact are tappable too. */
+.reader-number__open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.reader-number__open::after {
+  content: '';
+  position: absolute;
+  /* Above the fill and rolling digits, whose transforms would otherwise take the tap. */
+  z-index: 1;
+  inset: 0;
+}
+
+.reader-number__open:focus-visible {
+  outline: none;
+}
+
+.reader-number__open:focus-visible::after {
+  outline: 3px solid var(--ink);
+  outline-offset: var(--s-1);
+}
+
+.reader-number__more {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--s-1);
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+.reader-number__open:active .reader-number__more {
+  color: var(--ink);
+}
+
+@media (hover: hover) {
+  .reader-number__open:hover .reader-number__more {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+.reader-number__rule {
+  display: block;
+  height: 4px;
+  background: var(--rule);
+  overflow: hidden;
+}
+
+.reader-number__fill {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+  transform-origin: left center;
+  transition: transform var(--dur-4) var(--ease-out);
+}
+
+.reader-number__fact {
+  margin: 0;
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+@media (min-width: 960px) {
+  .reader-number__name {
+    font: var(--t-band);
+  }
+
+  .reader-number__rule {
+    height: 6px;
+  }
+}
+
+/* Level-up: a band in the book's ink wipes across the line, holds the new number, then recedes. */
+.reader-number__band {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--s-5);
+  background: var(--band-pattern, none), var(--band);
+  color: var(--band-on);
+  font: var(--t-band);
+  pointer-events: none;
+  animation: reader-band-in var(--dur-3) var(--ease-out) both;
+}
+
+.reader-number__band--out {
+  animation-name: reader-band-out;
+}
+
+:root:not([data-motion='full']) .reader-number__band {
+  animation-name: reader-band-fade-in;
+}
+
+:root:not([data-motion='full']) .reader-number__band--out {
+  animation-name: reader-band-fade-out;
+}
+
+@keyframes reader-band-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0); }
+}
+
+@keyframes reader-band-out {
+  from { clip-path: inset(0); }
+  to { clip-path: inset(0 100% 0 0); }
+}
+
+@keyframes reader-band-fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes reader-band-fade-out {
+  to { opacity: 0; }
+}
+
+.reader-number__sheet {
+  display: grid;
+  gap: var(--s-3);
+  max-width: 40ch;
+}
+
+.reader-number__sheet p {
+  margin: 0;
+}
+
+.reader-number__lead {
+  font: var(--t-h2);
+}
+
+/* The reader's own numbers, in the price-line register. */
+.reader-number__facts {
+  display: grid;
+  gap: var(--s-1);
+  margin-top: var(--s-3);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--rule);
+  font: var(--t-fact);
+}

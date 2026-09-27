@@ -1,0 +1,181 @@
+.cover {
+  position: relative;
+  border-radius: var(--radius);
+}
+
+/* The opening overlay carries a copy of the cover from here on. */
+.cover--opening {
+  visibility: hidden;
+}
+
+/* Tri-band: the two genre bands share the spare height equally; the white band takes only what its type needs. */
+.cover__book {
+  display: flex;
+  flex-direction: column;
+  /* 264px = spine strip, gaps and tab bar: the cover ends at the fold, so nothing below it peeks out as a sliver. */
+  min-height: max(360px, 100svh - 264px);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: #1a1a1a;
+  overflow: hidden;
+}
+
+@media (min-width: 720px) {
+  .cover__book {
+    min-height: clamp(360px, min(68svh, 100svh - 264px), 640px);
+  }
+}
+
+.cover__top,
+.cover__book .cover__start {
+  flex: 1 1 0;
+  min-height: var(--band-h);
+}
+
+/* Equal vertical padding on both bands keeps their shares of the spare height equal. */
+.cover__book .cover__start {
+  padding-block: calc(var(--s-4) + var(--s-1)) var(--s-3);
+}
+
+.cover__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: var(--s-4) var(--s-5);
+  background: var(--band-pattern, none), var(--band);
+  color: var(--band-on);
+  text-align: center;
+}
+
+.cover__level {
+  letter-spacing: 0;
+}
+
+.cover__body {
+  display: flex;
+  flex-direction: column;
+  padding: var(--s-5);
+  text-align: center;
+}
+
+.cover__thumb {
+  display: block;
+  flex: none;
+  align-self: center;
+  width: 56px;
+  height: 84px;
+  margin-bottom: var(--s-4);
+  object-fit: cover;
+  background: var(--band-pattern, none), var(--band);
+}
+
+.cover__thumb--blank {
+  border-block: 20px solid var(--band);
+  border-inline: 1px solid color-mix(in srgb, #1a1a1a 18%, transparent);
+  background: var(--paper);
+}
+
+.cover__title {
+  display: -webkit-box;
+  margin: 0;
+  font: var(--t-title);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  /* The tight title leading would otherwise shave the last line's descenders. */
+  overflow: clip;
+  overflow-clip-margin: 0.08em;
+}
+
+.cover__rule {
+  align-self: center;
+  width: 40px;
+  height: 2px;
+  margin-block: var(--s-4) var(--s-3);
+  background: var(--band-accent);
+}
+
+.cover__author,
+.cover__guide {
+  display: -webkit-box;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.cover__author {
+  font: var(--t-label);
+}
+
+.cover__guide {
+  align-self: center;
+  max-width: 34ch;
+  margin-top: var(--s-3);
+  font: var(--t-body);
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.cover__facts {
+  margin: var(--s-4) 0 0;
+  font: var(--t-fact);
+}
+
+.cover__error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--s-2);
+  margin: var(--s-3) 0 0;
+  font: var(--t-label);
+}
+
+.cover__error svg {
+  flex: none;
+}
+
+.cover__band {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-1);
+  min-width: 0;
+}
+
+.cover__label {
+  max-width: 100%;
+  overflow: hidden;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-height: 700px) and (max-width: 959px) {
+  .cover__body {
+    padding-block: var(--s-4);
+  }
+
+  /* Short phones: the thumbnail goes so the Start band stays in the first viewport. */
+  .cover__thumb {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .cover {
+    width: min(100%, calc((100svh - var(--s-8)) * 11 / 18));
+  }
+
+  .cover__book {
+    min-height: auto;
+    aspect-ratio: 11 / 18;
+  }
+}

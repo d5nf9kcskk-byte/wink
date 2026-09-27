@@ -1,0 +1,140 @@
+@import '@fontsource-variable/cabin/standard.css';
+
+:root {
+  /* Ink and ground. The white title band is pure white; the ground is a cool shelf grey so the cover reads as an object. */
+  --ink: #1a1a1a;
+  --ink-2: #4a4a4a;
+  --ink-3: #606060;
+  --paper: #ffffff;
+  --ground: #e7e8ea;
+  --ground-2: #dcdee1;
+  --rule: #c9ccd1;
+  --danger: #b3261e;
+
+  /* Genre bands (pastel, user-chosen): band, text on band, deep (pressed / fills), accent (thin rules, progress fills), and a quiet endpaper pattern. Text pairs pass WCAG AA. */
+  --g-fiction: #f6cba9; --g-fiction-on: #1f1d24; --g-fiction-deep: #e9a57a; --g-fiction-deep-on: #1f1d24; --g-fiction-accent: #b8662e;
+  --g-mystery: #bfe0cb; --g-mystery-on: #1f1d24; --g-mystery-deep: #8cc3a2; --g-mystery-deep-on: #1f1d24; --g-mystery-accent: #35805a;
+  --g-thriller: #e0949e; --g-thriller-on: #1f1d24; --g-thriller-deep: #c96f80; --g-thriller-deep-on: #1f1d24; --g-thriller-accent: #7d3e48;
+  --g-romance: #f7cade; --g-romance-on: #1f1d24; --g-romance-deep: #eb9dbf; --g-romance-deep-on: #1f1d24; --g-romance-accent: #b44d7c;
+  --g-fantasy: #d3c7ef; --g-fantasy-on: #1f1d24; --g-fantasy-deep: #ab9be0; --g-fantasy-deep-on: #1f1d24; --g-fantasy-accent: #6f5cbc;
+  --g-biography: #c3cff0; --g-biography-on: #1f1d24; --g-biography-deep: #93a6e0; --g-biography-deep-on: #1f1d24; --g-biography-accent: #4f64b5;
+  --g-nonfiction: #c4e1f3; --g-nonfiction-on: #1f1d24; --g-nonfiction-deep: #8fc2e3; --g-nonfiction-deep-on: #1f1d24; --g-nonfiction-accent: #357fae;
+  --g-young: #f7e4a4; --g-young-on: #1f1d24; --g-young-deep: #ecc95f; --g-young-deep-on: #1f1d24; --g-young-accent: #9a7612;
+  --g-unclassified: #dcdde2; --g-unclassified-on: #1f1d24; --g-unclassified-deep: #b5b7bf; --g-unclassified-deep-on: #1f1d24; --g-unclassified-accent: #6c6e77;
+
+  /* Endpapers: one tone-on-tone repeat per genre, drawn in 6-10% ink so it stays calm under text. */
+  --g-fiction-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M-4 4l8-8M0 14L14 0M10 18l8-8' stroke='%231f1d24' stroke-opacity='.07' stroke-width='2'/%3E%3C/svg%3E");
+  --g-mystery-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='6' cy='6' r='1.4' fill='%231f1d24' fill-opacity='.10'/%3E%3C/svg%3E");
+  --g-thriller-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath d='M0 0l10 10M10 0L0 10' stroke='%231f1d24' stroke-opacity='.06' stroke-width='1'/%3E%3C/svg%3E");
+  --g-romance-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9'%3E%3Cpath d='M0 9a8 8 0 0 1 16 0' fill='none' stroke='%231f1d24' stroke-opacity='.08' stroke-width='1.2'/%3E%3C/svg%3E");
+  --g-fantasy-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Cpath d='M7 3l1.2 3.3L11.5 7.5 8.2 8.7 7 12 5.8 8.7 2.5 7.5 5.8 6.3zM19 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z' fill='%231f1d24' fill-opacity='.09'/%3E%3C/svg%3E");
+  --g-biography-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Cpath d='M0 .5h6M.5 0v6' stroke='%231f1d24' stroke-opacity='.06'/%3E%3C/svg%3E");
+  --g-nonfiction-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10'%3E%3Cpath d='M0 5c6-6 6 6 12 0s6 6 12 0' fill='none' stroke='%231f1d24' stroke-opacity='.08' stroke-width='1.2'/%3E%3C/svg%3E");
+  --g-young-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='4' cy='5' r='1.6' fill='%231f1d24' fill-opacity='.09'/%3E%3Cpath d='M13 14l4-2' stroke='%231f1d24' stroke-opacity='.09' stroke-width='1.6' stroke-linecap='round'/%3E%3Ccircle cx='17' cy='4' r='1' fill='%231f1d24' fill-opacity='.09'/%3E%3C/svg%3E");
+  --g-unclassified-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Cpath d='M0 .5h4' stroke='%231f1d24' stroke-opacity='.05'/%3E%3C/svg%3E");
+
+  /* Type: one humanist sans in the Johnston/Gill line, width axis for numerals. */
+  --font: 'Cabin Variable', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  --t-caps: 600 0.8125rem/1 var(--font);
+  --t-caps-track: 0.14em;
+  --t-spine: 600 0.6875rem/1.3 var(--font);
+  --t-fact: 500 0.875rem/1.35 var(--font);
+  --t-body: 400 1rem/1.5 var(--font);
+  --t-label: 600 1rem/1.25 var(--font);
+  --t-band: 700 1.25rem/1 var(--font);
+  --t-h2: 700 1.375rem/1.15 var(--font);
+  --t-title: 700 clamp(2rem, 1.1rem + 4.4vw, 3.25rem)/1.02 var(--font);
+  --t-timer: 500 clamp(4.5rem, 2rem + 14vw, 7.5rem)/1 var(--font);
+
+  /* Space: 4px base. More above a heading than below. */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px;
+  --radius: 3px;
+  --band-h: 88px;
+  --tap: 48px;
+
+  /* Motion: exponential ease-out. Durations scale with the Motion setting via [data-motion]. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 160ms;
+  --dur-2: 320ms;
+  --dur-3: 560ms;
+  --dur-4: 900ms;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2f2f0;
+    --ink-2: #c4c5c7;
+    --ink-3: #9a9ca0;
+    --ground: #17181b;
+    --ground-2: #222428;
+    --rule: #3a3d43;
+    --danger: #ff8a80;
+    /* Bedtime reading: the title band dims to a neutral light grey instead of full white. */
+    --paper: #dedfe0;
+    /* Night: bands step down to each hue's deeper pastel so they part from the dimmed paper; text stays dark. */
+    --g-fiction: #e9a57a; --g-fiction-deep: #da9263; --g-fiction-accent: #8a502b;
+    --g-mystery: #8cc3a2; --g-mystery-deep: #72af8c; --g-mystery-accent: #316c4f;
+    --g-thriller: #c96f80; --g-thriller-deep: #b35f6e; --g-thriller-accent: #573339;
+    --g-romance: #eb9dbf; --g-romance-deep: #da85ab; --g-romance-accent: #96436a;
+    --g-fantasy: #ab9be0; --g-fantasy-deep: #9988d5; --g-fantasy-accent: #57498e;
+    --g-biography: #93a6e0; --g-biography-deep: #7f92d3; --g-biography-accent: #435291;
+    --g-nonfiction: #8fc2e3; --g-nonfiction-deep: #74aed3; --g-nonfiction-accent: #316b92;
+    --g-young: #ecc95f; --g-young-deep: #d3b048; --g-young-accent: #8e6d14;
+    --g-unclassified: #b5b7bf; --g-unclassified-deep: #9fa1a9; --g-unclassified-accent: #60626b;
+    color-scheme: dark;
+  }
+}
+
+:root[data-motion='reduced'] { --dur-1: 80ms; --dur-2: 140ms; --dur-3: 200ms; --dur-4: 240ms; }
+:root[data-motion='off'] { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; --dur-4: 0ms; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font: var(--t-body);
+  color: var(--ink);
+  background: var(--ground);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  caret-color: var(--ink);
+}
+
+::selection { background: var(--ink); color: var(--ground); }
+
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--rule) transparent; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+
+/* Always-white surfaces (sheets, the open book, the welcome cover) keep light-theme ink in both themes. */
+.on-paper {
+  --ink: #1a1a1a;
+  --ink-2: #4a4a4a;
+  --ink-3: #606060;
+  --ground: var(--paper);
+  --ground-2: #dcdee1;
+  --rule: #c9ccd1;
+  --danger: #b3261e;
+  color: #1a1a1a;
+  color-scheme: light;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+
+.caps {
+  font: var(--t-caps);
+  letter-spacing: var(--t-caps-track);
+  text-transform: uppercase;
+}

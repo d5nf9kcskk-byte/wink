@@ -1,0 +1,117 @@
+.goal-band__bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--ground-2);
+  color: var(--ink);
+  text-align: left;
+  overflow: hidden;
+  transition: background var(--dur-1) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.goal-band__bar:active {
+  background: var(--rule);
+}
+
+.goal-band__label {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 56px;
+  padding: 0 var(--s-5);
+  font: var(--t-label);
+}
+
+.goal-band__label svg {
+  flex: none;
+}
+
+.goal-band__edit {
+  margin-left: auto;
+}
+
+/* Beside the cover the goal band is a full band, the Start band's height and face. */
+@media (min-width: 960px) {
+  .goal-band__label {
+    min-height: var(--band-h);
+    font: var(--t-band);
+    letter-spacing: 0.01em;
+  }
+}
+
+/* A clipped copy of the label in the band's on-colour, so text stays legible on both sides of the fill edge. */
+.goal-band__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--band-pattern, none), var(--band);
+  color: var(--band-on);
+  clip-path: inset(0 calc(100% - var(--goal-fill) * 100%) 0 0);
+  transition: clip-path var(--dur-4) var(--ease-out);
+}
+
+.goal-band__form {
+  display: grid;
+  gap: var(--s-5);
+}
+
+.goal-band__prompt {
+  margin: 0 0 var(--s-3);
+  font: var(--t-label);
+}
+
+.goal-band__units {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-2);
+}
+
+.goal-band__stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.goal-band__step {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: 2px solid #1a1a1a;
+  border-radius: var(--radius);
+  background: transparent;
+  color: #1a1a1a;
+  transition: background var(--dur-1) var(--ease-out);
+}
+
+.goal-band__step:active:not([aria-disabled='true']) {
+  background: #1a1a1a;
+  color: var(--paper);
+}
+
+.goal-band__step[aria-disabled='true'] {
+  border-color: var(--ink-3);
+  color: var(--ink-3);
+  cursor: not-allowed;
+}
+
+.goal-band__step:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+.goal-band__amount {
+  flex: 1;
+  font: var(--t-h2);
+  text-align: center;
+}
+
+.goal-band__error {
+  margin: 0;
+  font: var(--t-label);
+}

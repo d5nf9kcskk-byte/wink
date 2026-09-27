@@ -1,0 +1,589 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T00:00:00.000Z",
+  "title": "Design System: Wink",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Press Black",
+        "canonical": "#1a1a1a",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(25.0% 0.000 89.9)",
+          "oklch(35.0% 0.000 89.9)",
+          "oklch(45.0% 0.000 89.9)",
+          "oklch(55.0% 0.000 89.9)",
+          "oklch(65.0% 0.000 89.9)",
+          "oklch(80.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#4a4a4a",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(25.0% 0.000 89.9)",
+          "oklch(35.0% 0.000 89.9)",
+          "oklch(45.0% 0.000 89.9)",
+          "oklch(55.0% 0.000 89.9)",
+          "oklch(65.0% 0.000 89.9)",
+          "oklch(80.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Pencil",
+        "canonical": "#606060",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(25.0% 0.000 89.9)",
+          "oklch(35.0% 0.000 89.9)",
+          "oklch(45.0% 0.000 89.9)",
+          "oklch(55.0% 0.000 89.9)",
+          "oklch(65.0% 0.000 89.9)",
+          "oklch(80.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Title White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(25.0% 0.000 89.9)",
+          "oklch(35.0% 0.000 89.9)",
+          "oklch(45.0% 0.000 89.9)",
+          "oklch(55.0% 0.000 89.9)",
+          "oklch(65.0% 0.000 89.9)",
+          "oklch(80.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "paper-night": {
+        "role": "neutral",
+        "displayName": "Bedtime Grey",
+        "canonical": "#dedfe0",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 247.8)",
+          "oklch(25.0% 0.001 247.8)",
+          "oklch(35.0% 0.001 247.8)",
+          "oklch(45.0% 0.001 247.8)",
+          "oklch(55.0% 0.001 247.8)",
+          "oklch(65.0% 0.001 247.8)",
+          "oklch(80.0% 0.002 247.8)",
+          "oklch(95.0% 0.002 247.8)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Shelf Grey",
+        "canonical": "#e7e8ea",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 264.5)",
+          "oklch(25.0% 0.001 264.5)",
+          "oklch(35.0% 0.001 264.5)",
+          "oklch(45.0% 0.002 264.5)",
+          "oklch(55.0% 0.002 264.5)",
+          "oklch(65.0% 0.002 264.5)",
+          "oklch(80.0% 0.003 264.5)",
+          "oklch(95.0% 0.003 264.5)"
+        ]
+      },
+      "ground-2": {
+        "role": "neutral",
+        "displayName": "Shelf Shadow",
+        "canonical": "#dcdee1",
+        "tonalRamp": [
+          "oklch(15.0% 0.002 258.3)",
+          "oklch(25.0% 0.002 258.3)",
+          "oklch(35.0% 0.003 258.3)",
+          "oklch(45.0% 0.003 258.3)",
+          "oklch(55.0% 0.003 258.3)",
+          "oklch(65.0% 0.004 258.3)",
+          "oklch(80.0% 0.004 258.3)",
+          "oklch(95.0% 0.004 258.3)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#c9ccd1",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 260.7)",
+          "oklch(25.0% 0.004 260.7)",
+          "oklch(35.0% 0.005 260.7)",
+          "oklch(45.0% 0.005 260.7)",
+          "oklch(55.0% 0.006 260.7)",
+          "oklch(65.0% 0.006 260.7)",
+          "oklch(80.0% 0.007 260.7)",
+          "oklch(95.0% 0.007 260.7)"
+        ]
+      },
+      "danger": {
+        "role": "error",
+        "displayName": "Correction Red",
+        "canonical": "#b3261e",
+        "tonalRamp": [
+          "oklch(15.0% 0.126 28.7)",
+          "oklch(25.0% 0.141 28.7)",
+          "oklch(35.0% 0.156 28.7)",
+          "oklch(45.0% 0.171 28.7)",
+          "oklch(55.0% 0.171 28.7)",
+          "oklch(65.0% 0.156 28.7)",
+          "oklch(80.0% 0.134 28.7)",
+          "oklch(95.0% 0.112 28.7)"
+        ]
+      },
+      "ground-night": {
+        "role": "neutral",
+        "displayName": "Night Shelf",
+        "canonical": "#17181b",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 271.1)",
+          "oklch(25.0% 0.006 271.1)",
+          "oklch(35.0% 0.005 271.1)",
+          "oklch(45.0% 0.005 271.1)",
+          "oklch(55.0% 0.004 271.1)",
+          "oklch(65.0% 0.004 271.1)",
+          "oklch(80.0% 0.003 271.1)",
+          "oklch(95.0% 0.002 271.1)"
+        ]
+      },
+      "ink-night": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#f2f2f0",
+        "tonalRamp": [
+          "oklch(15.0% 0.001 106.4)",
+          "oklch(25.0% 0.001 106.4)",
+          "oklch(35.0% 0.001 106.4)",
+          "oklch(45.0% 0.002 106.4)",
+          "oklch(55.0% 0.002 106.4)",
+          "oklch(65.0% 0.002 106.4)",
+          "oklch(80.0% 0.002 106.4)",
+          "oklch(95.0% 0.003 106.4)"
+        ]
+      },
+      "g-fiction": {
+        "role": "primary",
+        "displayName": "Fiction Peach",
+        "canonical": "#f6cba9",
+        "tonalRamp": [
+          "oklch(15.0% 0.045 55.0)",
+          "oklch(25.0% 0.052 55.0)",
+          "oklch(35.0% 0.059 55.0)",
+          "oklch(45.0% 0.066 55.0)",
+          "oklch(55.0% 0.073 55.0)",
+          "oklch(65.0% 0.080 55.0)",
+          "oklch(80.0% 0.074 55.0)",
+          "oklch(95.0% 0.030 55.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme replaced the earlier fully-saturated Fiction Orange (#e8762b) with this pastel plus a #b8662e accent for thin rules. Deepens to #e9a57a in dark mode."
+      },
+      "g-mystery": {
+        "role": "primary",
+        "displayName": "Mystery Sage",
+        "canonical": "#bfe0cb",
+        "tonalRamp": [
+          "oklch(15.0% 0.040 155.0)",
+          "oklch(25.0% 0.046 155.0)",
+          "oklch(35.0% 0.052 155.0)",
+          "oklch(45.0% 0.058 155.0)",
+          "oklch(55.0% 0.058 155.0)",
+          "oklch(65.0% 0.052 155.0)",
+          "oklch(80.0% 0.044 155.0)",
+          "oklch(95.0% 0.020 155.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme replaced the earlier Mystery Green (#00794c) with this pastel plus a #35805a accent. Deepens to #8cc3a2 in dark mode."
+      },
+      "g-thriller": {
+        "role": "primary",
+        "displayName": "Thriller Brick",
+        "canonical": "#e0949e",
+        "tonalRamp": [
+          "oklch(15.0% 0.060 15.0)",
+          "oklch(25.0% 0.068 15.0)",
+          "oklch(35.0% 0.076 15.0)",
+          "oklch(45.0% 0.084 15.0)",
+          "oklch(55.0% 0.088 15.0)",
+          "oklch(65.0% 0.080 15.0)",
+          "oklch(80.0% 0.068 15.0)",
+          "oklch(95.0% 0.030 15.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme replaced the earlier Thriller Red (#c8102e) with a pastel pink (#f3bcc3), then the owner asked for it to move further from Romance's pink: now a darker brick/rust red plus a #7d3e48 accent. Deepens to #c96f80 in dark mode."
+      },
+      "g-romance": {
+        "role": "primary",
+        "displayName": "Romance Pink",
+        "canonical": "#f7cade",
+        "tonalRamp": [
+          "oklch(15.0% 0.055 350.0)",
+          "oklch(25.0% 0.063 350.0)",
+          "oklch(35.0% 0.070 350.0)",
+          "oklch(45.0% 0.078 350.0)",
+          "oklch(55.0% 0.082 350.0)",
+          "oklch(65.0% 0.076 350.0)",
+          "oklch(80.0% 0.064 350.0)",
+          "oklch(95.0% 0.028 350.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme replaced the earlier Romance Rose (#d6336c) with this pastel plus a #b44d7c accent. Deepens to #eb9dbf in dark mode."
+      },
+      "g-fantasy": {
+        "role": "primary",
+        "displayName": "Fantasy Lilac",
+        "canonical": "#d3c7ef",
+        "tonalRamp": [
+          "oklch(15.0% 0.050 295.0)",
+          "oklch(25.0% 0.057 295.0)",
+          "oklch(35.0% 0.064 295.0)",
+          "oklch(45.0% 0.071 295.0)",
+          "oklch(55.0% 0.065 295.0)",
+          "oklch(65.0% 0.057 295.0)",
+          "oklch(80.0% 0.046 295.0)",
+          "oklch(95.0% 0.022 295.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme replaced the earlier Fantasy Violet (#5b3fa0) with this pastel plus a #6f5cbc accent. Deepens to #ab9be0 in dark mode."
+      },
+      "g-biography": {
+        "role": "primary",
+        "displayName": "Biography Periwinkle",
+        "canonical": "#c3cff0",
+        "tonalRamp": [
+          "oklch(15.0% 0.055 270.0)",
+          "oklch(25.0% 0.063 270.0)",
+          "oklch(35.0% 0.070 270.0)",
+          "oklch(45.0% 0.066 270.0)",
+          "oklch(55.0% 0.060 270.0)",
+          "oklch(65.0% 0.054 270.0)",
+          "oklch(80.0% 0.044 270.0)",
+          "oklch(95.0% 0.022 270.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme replaced the earlier Biography Navy (#1f3a93) with this pastel plus a #4f64b5 accent. Deepens to #93a6e0 in dark mode."
+      },
+      "g-nonfiction": {
+        "role": "primary",
+        "displayName": "Nonfiction Sky",
+        "canonical": "#c4e1f3",
+        "tonalRamp": [
+          "oklch(15.0% 0.040 235.0)",
+          "oklch(25.0% 0.046 235.0)",
+          "oklch(35.0% 0.052 235.0)",
+          "oklch(45.0% 0.058 235.0)",
+          "oklch(55.0% 0.064 235.0)",
+          "oklch(65.0% 0.058 235.0)",
+          "oklch(80.0% 0.048 235.0)",
+          "oklch(95.0% 0.022 235.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme kept the Sky family, replacing the earlier mid-tone #7fb2e5 with this lighter pastel plus a #357fae accent. Deepens to #8fc2e3 in dark mode."
+      },
+      "g-young": {
+        "role": "primary",
+        "displayName": "Young Readers Butter",
+        "canonical": "#f7e4a4",
+        "tonalRamp": [
+          "oklch(15.0% 0.050 95.0)",
+          "oklch(25.0% 0.060 95.0)",
+          "oklch(35.0% 0.070 95.0)",
+          "oklch(45.0% 0.080 95.0)",
+          "oklch(55.0% 0.090 95.0)",
+          "oklch(65.0% 0.100 95.0)",
+          "oklch(80.0% 0.090 95.0)",
+          "oklch(95.0% 0.040 95.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme replaced the earlier Young Readers Gold (#f4c430) with this pastel plus a #9a7612 accent. Deepens to #ecc95f in dark mode."
+      },
+      "g-unclassified": {
+        "role": "primary",
+        "displayName": "Unclassified Grey",
+        "canonical": "#dcdde2",
+        "tonalRamp": [
+          "oklch(15.0% 0.006 258.0)",
+          "oklch(25.0% 0.007 258.0)",
+          "oklch(35.0% 0.008 258.0)",
+          "oklch(45.0% 0.008 258.0)",
+          "oklch(55.0% 0.009 258.0)",
+          "oklch(65.0% 0.010 258.0)",
+          "oklch(80.0% 0.009 258.0)",
+          "oklch(95.0% 0.007 258.0)"
+        ],
+        "status": "pending-owner-approval",
+        "note": "Pastel re-theme lightened Unclassified Grey from #8e8a84 and added a #6c6e77 accent. Deepens to #b5b7bf in dark mode."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Book titles on the cover and the book-opening title page; Finish band; page-number input."
+      },
+      "timer": {
+        "displayName": "Timer",
+        "purpose": "Session clock only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "band": {
+        "displayName": "Band",
+        "purpose": "Hero band labels, desktop goal band, level-up band."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Author, standard band labels, banner, errors."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Guide copy, 34-40ch."
+      },
+      "fact": {
+        "displayName": "Fact",
+        "purpose": "Price-line register for facts, hints, tab labels."
+      },
+      "caps": {
+        "displayName": "Caps",
+        "purpose": "Uppercase +0.14em text inside bands only."
+      },
+      "spine": {
+        "displayName": "Spine",
+        "purpose": "Vertical spine titles and numbers."
+      }
+    },
+    "shadows": [
+      {
+        "name": "state-ring",
+        "value": "inset 0 0 0 3px var(--band-on)",
+        "purpose": "Selected band. State mark only; no drop shadows exist in the system."
+      },
+      {
+        "name": "state-next",
+        "value": "inset 0 -5px 0 currentColor",
+        "purpose": "Next PIN cell while focused."
+      },
+      {
+        "name": "spine-accent-ring",
+        "value": "inset 0 0 0 1px var(--band-accent)",
+        "purpose": "Read week-spine and year-shelf-spine border, in the genre's accent ink."
+      },
+      {
+        "name": "scrim",
+        "value": "rgb(10 11 13 / 0.5)",
+        "purpose": "Sheet backdrop (background, not a shadow)."
+      }
+    ],
+    "patterns": [
+      {
+        "name": "band-pattern",
+        "value": "background: var(--band-pattern, none), var(--band);",
+        "purpose": "One tone-on-tone SVG endpaper repeat per genre (var(--g-<genre>-pattern)), 5-10% ink opacity, layered under the flat genre colour on the cover bands, the thumbnail placeholder, week/year-shelf spines, and inside the book-opening cover. The only surface pattern in the system; always paired with the flat fill, never used alone."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Exponential ease-out for fills, slides, hinges; EASE_OUT in Motion."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Symmetric moves."
+      },
+      {
+        "name": "dur-1",
+        "value": "160ms",
+        "purpose": "Press and colour changes. Reduced 80ms, Off 0."
+      },
+      {
+        "name": "dur-2",
+        "value": "320ms",
+        "purpose": "Small moves, cover swap. Reduced 140ms, Off 0."
+      },
+      {
+        "name": "dur-3",
+        "value": "560ms",
+        "purpose": "Sheets, spines sliding into slots, level-up wipe. Reduced 200ms, Off 0."
+      },
+      {
+        "name": "dur-4",
+        "value": "900ms",
+        "purpose": "Band, goal and Reader No. fills. Reduced 240ms, Off 0."
+      },
+      {
+        "name": "motion-setting",
+        "value": ":root[data-motion='full'|'reduced'|'off']; dur(pref, s) caps Motion at 0.2s Reduced, 0 Off",
+        "purpose": "Reader's choice, else Reduced when the OS prefers reduced motion, else Full."
+      },
+      {
+        "name": "book-opening",
+        "value": "~1.7s sequence at Full (Motion library, HEFT ease [0.45,0,0.25,1] for the board swing, EASE_OUT for the page-grow): cover swings open on its left spine revealing a two-page spread with the genre endpaper inside the covers, 4 leaves turn in a staggered sequence (stagger 0.12s, start 0.45s), then the title page zooms and grows to become the white session page. Reduced fades straight to the session page (dur('reduced', 0.25)); Off skips instantly.",
+        "purpose": "Signature: the cover is the screen, and opening it on its spine is how the session begins."
+      },
+      {
+        "name": "celebration-scale",
+        "value": "session band fill < level-up band wipe < finished-book full-screen ink flood",
+        "purpose": "Celebration size scales with significance."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "short-phone",
+        "value": "max-height: 700px"
+      },
+      {
+        "name": "rail",
+        "value": "720px"
+      },
+      {
+        "name": "split",
+        "value": "960px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Hero Band (Start reading)",
+      "kind": "button",
+      "refersTo": "band-hero",
+      "description": "The bottom band of the cover; the primary action, full width, 88px, in the book's pastel ink with a progress rule along its top edge.",
+      "html": "<button class=\"ds-band-hero\"><span class=\"ds-band-rule\"><span class=\"ds-band-fill\"></span></span><span class=\"ds-band-hero__c\"><svg width=\"44\" height=\"24\" viewBox=\"0 0 44 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" aria-hidden=\"true\"><ellipse cx=\"22\" cy=\"12\" rx=\"20\" ry=\"10\"/><circle cx=\"14\" cy=\"12\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M25 13q4-5 8 0\" stroke-linecap=\"round\"/></svg><span>Start reading</span></span></button>",
+      "css": ".ds-band-hero{position:relative;display:flex;width:100%;min-height:88px;padding:20px 24px 12px;border:0;border-radius:0;background:var(--band, #d3c7ef);color:var(--band-on, #1f1d24);font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);font-weight:700;font-size:1.25rem;line-height:1;letter-spacing:.01em;cursor:pointer;transition:background 160ms cubic-bezier(.16,1,.3,1),color 160ms cubic-bezier(.16,1,.3,1)}.ds-band-hero__c{display:flex;flex-direction:column;align-items:center;gap:4px;width:100%}.ds-band-rule{position:absolute;inset:0 0 auto 0;height:8px;background:color-mix(in srgb,var(--band-deep, #ab9be0) 30%,var(--band, #d3c7ef))}.ds-band-fill{display:block;height:100%;width:42%;background:var(--band-deep, #ab9be0)}.ds-band-hero:active{background:var(--band-deep, #ab9be0);color:var(--band-deep-on, #1f1d24)}.ds-band-hero:focus-visible{outline:3px solid var(--band-on, #1f1d24);outline-offset:-7px}"
+    },
+    {
+      "name": "Band",
+      "kind": "button",
+      "refersTo": "band",
+      "description": "Standard 48px full-width band control in the book's pastel ink; pressed state goes deep, selected state takes an inset ring.",
+      "html": "<button class=\"ds-band\" aria-pressed=\"false\">Paperback</button> <button class=\"ds-band\" aria-pressed=\"true\">Ebook</button>",
+      "css": ".ds-band{display:flex;align-items:center;width:100%;min-height:48px;margin-bottom:8px;padding:0 24px;border:0;border-radius:0;background:var(--band, #d3c7ef);color:var(--band-on, #1f1d24);font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);font-weight:600;font-size:1rem;line-height:1.25;text-align:left;cursor:pointer;transition:background 160ms cubic-bezier(.16,1,.3,1)}.ds-band:active{background:var(--band-deep, #ab9be0);color:var(--band-deep-on, #1f1d24)}.ds-band[aria-pressed=\"true\"]{box-shadow:inset 0 0 0 3px var(--band-on, #1f1d24)}.ds-band:focus-visible{outline:3px solid var(--band-on, #1f1d24);outline-offset:-7px}"
+    },
+    {
+      "name": "Tri-Band Cover",
+      "kind": "card",
+      "refersTo": "title-band",
+      "description": "The signature: genre band (with endpaper texture), white title band, genre Start band. Opens on its left spine into the book-opening sequence, ending on the session page.",
+      "html": "<article class=\"ds-cover\"><div class=\"ds-cover__top\"><span class=\"ds-caps\">Fantasy &amp; Sci-Fi</span><span class=\"ds-caps\">Reader No. 6</span></div><div class=\"ds-cover__body\"><h1 class=\"ds-cover__title\">The Name of the Wind</h1><span class=\"ds-cover__rule\"></span><p class=\"ds-cover__author\">Patrick Rothfuss</p><p class=\"ds-cover__facts\">Print · p. 312 of 736 · about 16 sessions left</p></div><div class=\"ds-cover__start\">Start reading</div></article>",
+      "css": ".ds-cover{display:flex;flex-direction:column;width:320px;border-radius:3px;overflow:hidden;background:#ffffff;color:#1a1a1a;font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);transform-origin:left center;transition:transform 560ms cubic-bezier(.16,1,.3,1)}.ds-cover:hover{transform:perspective(1200px) rotateY(-12deg)}.ds-cover__top,.ds-cover__start{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:88px;background:var(--band-pattern, none), var(--band, #d3c7ef);color:var(--band-on, #1f1d24)}.ds-cover__start{font-weight:700;font-size:1.25rem}.ds-caps{font-weight:600;font-size:.8125rem;line-height:1;letter-spacing:.14em;text-transform:uppercase}.ds-cover__body{display:flex;flex-direction:column;padding:24px;text-align:center}.ds-cover__title{margin:0;font-weight:700;font-size:2rem;line-height:1.02;text-wrap:balance}.ds-cover__rule{align-self:center;width:40px;height:2px;margin:16px 0 12px;background:var(--band-accent, #6f5cbc)}.ds-cover__author{margin:0;font-weight:600;font-size:1rem}.ds-cover__facts{margin:16px 0 0;font-weight:500;font-size:.875rem;line-height:1.35;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Spine",
+      "kind": "chip",
+      "refersTo": "spine",
+      "description": "A current book as a spine in its pastel genre ink (with endpaper texture); vertical caps title, number at the foot; selected takes a band-on border.",
+      "html": "<div class=\"ds-shelf\"><button class=\"ds-spine\" aria-pressed=\"false\" style=\"--band:#bfe0cb;--band-on:#1f1d24;--band-deep:#8cc3a2\"><span class=\"ds-spine__t\">The Thursday Murder Club</span><span>1</span></button><button class=\"ds-spine\" aria-pressed=\"true\"><span class=\"ds-spine__t\">The Name of the Wind</span><span>3</span></button></div>",
+      "css": ".ds-shelf{display:flex;gap:8px}.ds-spine{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:52px;height:144px;padding:8px;border:3px solid transparent;border-radius:3px;background:var(--band, #d3c7ef);color:var(--band-on, #1f1d24);font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);font-weight:600;font-size:.6875rem;line-height:1.3;cursor:pointer;transition:background 160ms cubic-bezier(.16,1,.3,1)}.ds-spine__t{height:103px;writing-mode:vertical-rl;letter-spacing:.08em;text-transform:uppercase}.ds-spine:active{background:var(--band-deep, #ab9be0)}.ds-spine[aria-pressed=\"true\"]{border-color:var(--band-on, #1f1d24)}.ds-spine:focus-visible{outline:3px solid var(--band-on, #1f1d24);outline-offset:-7px}"
+    },
+    {
+      "name": "Goal Band",
+      "kind": "custom",
+      "refersTo": "band",
+      "description": "Shelf-grey bar whose fill is a clipped copy of the label in the book's pastel ink, so text reads on both sides of the edge.",
+      "html": "<button class=\"ds-goal\" style=\"--fill:.6\"><span class=\"ds-goal__l\">20 of 30 minutes today</span><span class=\"ds-goal__f\" aria-hidden=\"true\"><span class=\"ds-goal__l\">20 of 30 minutes today</span></span></button>",
+      "css": ".ds-goal{position:relative;display:block;width:100%;padding:0;border:0;border-radius:0;background:var(--ground-2,#dcdee1);color:var(--ink,#1a1a1a);font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);text-align:left;overflow:hidden;cursor:pointer}.ds-goal:active{background:var(--rule,#c9ccd1)}.ds-goal__l{display:flex;align-items:center;min-height:56px;padding:0 24px;font-weight:600;font-size:1rem}.ds-goal__f{position:absolute;inset:0;background:var(--band, #d3c7ef);color:var(--band-on, #1f1d24);clip-path:inset(0 calc(100% - var(--fill) * 100%) 0 0);transition:clip-path 900ms cubic-bezier(.16,1,.3,1)}.ds-goal:hover .ds-goal__f{clip-path:inset(0)}.ds-goal:focus-visible{outline:3px solid var(--ink,#1a1a1a);outline-offset:2px}"
+    },
+    {
+      "name": "Page Number Input",
+      "kind": "input",
+      "refersTo": "input-number",
+      "description": "Page entry after a session: display-size tabular number in a 1px pencil-stroked field with outlined steppers.",
+      "html": "<div class=\"ds-pe\"><input class=\"ds-pe__in\" inputmode=\"numeric\" value=\"312\" aria-label=\"Page\"><button class=\"ds-step\" aria-label=\"Back one page\">−</button><button class=\"ds-step\" aria-label=\"Forward one page\">+</button></div>",
+      "css": ".ds-pe{display:flex;align-items:center;gap:8px;font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);}.ds-pe__in{width:calc(4ch + 24px);min-height:48px;padding:4px 12px;border:1px solid var(--ink-3,#606060);border-radius:3px;background:#ffffff;color:#1a1a1a;font:700 2rem/1.02 inherit;font-variant-numeric:tabular-nums}.ds-pe__in:focus-visible{outline:3px solid #1a1a1a;outline-offset:2px}.ds-pe__in[aria-invalid=\"true\"]{border-color:#b3261e}.ds-step{display:grid;place-items:center;width:48px;height:48px;padding:0;border:1px solid #1a1a1a;border-radius:3px;background:#ffffff;color:#1a1a1a;font-size:1.25rem;cursor:pointer;transition:background 160ms cubic-bezier(.16,1,.3,1),color 160ms}.ds-step:active{background:#1a1a1a;color:#ffffff}.ds-step:focus-visible{outline:3px solid #1a1a1a;outline-offset:2px}"
+    },
+    {
+      "name": "Tab Bar",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "Bottom tabs on phones (rail from 720px): fact-size labels in graphite; active is black, bold, with a 3px ink bar on the outer edge.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-tab\" aria-current=\"page\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z\"/></svg>Home</a><a class=\"ds-tab\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"8\" r=\"4\"/><path d=\"M4 21a8 8 0 0 1 16 0\"/></svg>You</a></nav>",
+      "css": ".ds-nav{display:flex;background:var(--ground,#e7e8ea);border-top:1px solid var(--rule,#c9ccd1);font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);}.ds-tab{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;height:56px;color:var(--ink-2,#4a4a4a);font-weight:500;font-size:.875rem;text-decoration:none;transition:color 160ms cubic-bezier(.16,1,.3,1)}.ds-tab:hover{color:var(--ink,#1a1a1a)}.ds-tab[aria-current=\"page\"]{color:var(--ink,#1a1a1a);font-weight:700}.ds-tab[aria-current=\"page\"]::before{content:\"\";position:absolute;inset:-1px 0 auto;border-top:3px solid var(--ink,#1a1a1a)}.ds-tab:focus-visible{outline:3px solid var(--ink,#1a1a1a);outline-offset:-4px}"
+    },
+    {
+      "name": "Sheet",
+      "kind": "card",
+      "refersTo": "sheet-head",
+      "description": "White leaf with a 56px head band (press black, or the book's ink) carrying a caps title and a 48px close.",
+      "html": "<div class=\"ds-sheet\"><div class=\"ds-sheet__h\"><span>Set your goal</span><button class=\"ds-sheet__x\" aria-label=\"Close\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\"><path d=\"M6 6l12 12M18 6L6 18\"/></svg></button></div><div class=\"ds-sheet__b\">How long do you want to read each day?</div></div>",
+      "css": ".ds-sheet{width:360px;border-radius:3px 3px 0 0;overflow:hidden;background:#ffffff;color:#1a1a1a;font-family: var(--font, 'Cabin Variable', 'Gill Sans', 'Trebuchet MS', sans-serif);}.ds-sheet__h{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:0 8px 0 24px;background:#1a1a1a;color:#ffffff;font-weight:600;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase}.ds-sheet__x{display:grid;place-items:center;width:48px;height:48px;border:0;background:transparent;color:inherit;cursor:pointer}.ds-sheet__x:focus-visible{outline:3px solid currentColor;outline-offset:-6px}.ds-sheet__b{padding:24px;font-size:1rem;line-height:1.5}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Tri-Band Paperback",
+    "overview": "Wink is set like a 1935 paperback cover: a flat genre-coloured band on top, a white title band in the middle, a genre band at the bottom. The reader's current book fills Home as that cover, and its bottom band is the Start reading control. Everything else in the app is built from the same material: bands of flat ink, white title bands, numbered spines on a shelf, and a small price-line register for facts (\"Print · p. 312 of 736 · about 16 sessions left\"). There is one typeface, a humanist sans in the Johnston/Gill line, used in bold mixed case for titles and spaced caps inside bands.\n\nThe density is low and the scale is large. Controls are whole bands, tall enough for a thumb, not buttons floating on cards. Objects sit on a cool shelf grey so the white title band reads as paper and the cover reads as an object. The world is flat: no gradients, no drop shadows, no cream paper. Depth comes from colour blocks, from a quiet tone-on-tone endpaper texture inside each genre band, and from motion. The cover hinges open on its spine into a two-page spread, its leaves turn, bands fill left to right, numbers roll, and spines slide into their slots.\n\nMotion follows one grammar and has three settings (Full, Reduced, Off). Celebration grows with significance: a finished session fills a band, a level-up wipes a band across the Reader No. line, and a finished book floods the whole screen in the book's ink.",
+    "keyCharacteristics": [
+      "Tri-band composition: genre band, white title band, genre band.",
+      "Every book paints in its genre's ink through six generic properties (band, band-on, band-deep, band-deep-on, band-accent, band-pattern).",
+      "One humanist sans (Cabin Variable), tabular numerals throughout.",
+      "Flat colour, 3px corners at most, no drop shadows; a tone-on-tone endpaper texture is the one permitted surface pattern.",
+      "Bands are the controls, at least 48px tall and 88px for the hero.",
+      "Motion scales with significance and obeys Full / Reduced / Off."
+    ],
+    "rules": [
+      {
+        "name": "The Book Paints Itself Rule",
+        "body": "Colour in any component comes from the current book's genre through the band, band-on, band-deep, band-deep-on, band-accent and band-pattern properties (`genreVars()`). No component hard-codes a genre hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Always-Paper Rule",
+        "body": "A surface that is always white (the cover body, sheets, the session page, the welcome cover) carries `.on-paper`, which pins light-theme ink in both themes. Dark mode dims the paper; it never inverts it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pressed Goes Deep Rule",
+        "body": "A band's active state swaps to its deep ink and deep-on text. When the band is already deep (the Finish save band), pressing takes it to Press Black.",
+        "section": "colors"
+      },
+      {
+        "name": "The Accent Is A Line, Not A Fill Rule",
+        "body": "`band-accent` (a saturated pull of the genre hue) only ever draws a thin rule or a 1px inset border — the cover/title-page divider, the week-spine and year-shelf-spine outline. It never fills a surface; fills stay on band/band-deep.",
+        "section": "colors"
+      },
+      {
+        "name": "The Caps Live In Bands Rule",
+        "body": "Spaced caps belong to band text (genre, Reader No., sheet titles, spines, the Finished stamp). They never sit above a heading as a label or kicker.",
+        "section": "typography"
+      },
+      {
+        "name": "The Price Line Rule",
+        "body": "Facts go on one line in the fact register, separated by middle dots, with tabular figures: \"Print · p. 312 of 736 · about 16 sessions left\".",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Stack Rule",
+        "body": "Surfaces never cast shadows. To separate one layer from another, use a colour block, a 1 to 2px rule, a scrim, or the tone-on-tone endpaper pattern. Inset rings in currentColor are allowed only to mark a state such as selected or next.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** paint components through band / band-on / band-deep / band-deep-on / band-accent / band-pattern from `genreVars()`, never a literal genre hex.",
+      "**Do** keep every genre ink/on and deep/deep-on pair at 4.5:1 or better and extend `genres.test.ts` when adding an ink. The current hues are pending owner approval.",
+      "**Do** keep `band-accent` to thin rules and 1px borders only; never use it as a fill.",
+      "**Do** keep the endpaper pattern quiet (5-10% ink opacity) and always layered under the flat band colour, never used alone.",
+      "**Do** put `.on-paper` on any surface that stays white in both themes.",
+      "**Do** make the band itself the control: full width, at least 48px, 88px for the primary action.",
+      "**Do** time every CSS transition with `--dur-1..4` (160 / 320 / 560 / 900ms) and `--ease-out`, and every Motion animation with `dur(pref, seconds)` and `EASE_OUT`, so Full / Reduced / Off governs all motion.",
+      "**Do** scale celebration with significance: a session fills a band, a level-up wipes a band, a finished book floods the screen.",
+      "**Do** set facts in the price-line register with tabular figures."
+    ],
+    "donts": [
+      "**Don't** use drop shadows or gradients. Inset currentColor rings for selected or next state, and the endpaper texture, are the only departures from flat colour.",
+      "**Don't** round corners past 3px, and don't round full-width bands at all.",
+      "**Don't** use cream or warm paper. Title White is pure white, dimmed to Bedtime Grey (#dedfe0) at night.",
+      "**Don't** build dashboards of cover-thumbnail cards, stat tiles or progress rings. Progress is a band fill, a spine or a rule.",
+      "**Don't** set caps outside a band, or as a kicker above a heading.",
+      "**Don't** add a second typeface."
+    ]
+  }
+}

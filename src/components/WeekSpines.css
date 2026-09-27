@@ -1,0 +1,153 @@
+.week-spines {
+  display: grid;
+  gap: var(--s-2);
+}
+
+.week-spines__streak {
+  margin: 0;
+  font: var(--t-h2);
+}
+
+.week-spines__open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.week-spines__open:focus-visible {
+  outline-offset: var(--s-1);
+}
+
+.week-spines__more {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--s-1);
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+.week-spines__open:active .week-spines__more {
+  color: var(--ink);
+}
+
+@media (hover: hover) {
+  .week-spines__open:hover .week-spines__more {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+.week-spines__ember {
+  margin: 0;
+  font: var(--t-label);
+  color: var(--ink);
+}
+
+.week-spines__note {
+  margin: 0;
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+/* Seven equal columns so the week fills the whole rule; overflow: clip lets a held spine rise from behind it. */
+.week-spines__shelf {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: end;
+  gap: var(--s-2);
+  margin: var(--s-3) 0 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 2px solid var(--ink);
+  overflow: clip;
+}
+
+.week-spines__spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--s-2);
+  /* Grows with its column so wide screens keep spine proportions; capped below the book strip's spines. */
+  width: 100%;
+  aspect-ratio: 7 / 16;
+  max-height: 132px;
+  padding-bottom: var(--s-2);
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition:
+    transform var(--dur-3) var(--ease-out),
+    opacity var(--dur-3) var(--ease-out);
+}
+
+.week-spines__spine--read,
+.week-spines__spine--repaired {
+  background: var(--band-pattern, none), var(--band);
+  color: var(--band-on);
+  box-shadow: inset 0 0 0 1px var(--band-accent);
+}
+
+.week-spines__spine--grace {
+  border: 2px dashed var(--ink);
+  border-bottom: 0;
+  color: var(--ink);
+}
+
+.week-spines__spine--missed {
+  border: 1px solid var(--ink-3);
+  border-bottom: 0;
+  color: var(--ink-2);
+}
+
+.week-spines__spine--pending {
+  border: 2px solid var(--ink);
+  border-bottom: 0;
+  color: var(--ink);
+}
+
+.week-spines__spine--future,
+.week-spines__spine--before {
+  background: var(--ground-2);
+  color: var(--ink-2);
+}
+
+.week-spines__spine--held {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+:root:not([data-motion='full']) .week-spines__spine--held {
+  transform: none;
+}
+
+.week-spines__no {
+  font: var(--t-spine);
+}
+
+.week-spines__letter {
+  font: var(--t-caps);
+  letter-spacing: var(--t-caps-track);
+}
+
+.week-spines__word {
+  writing-mode: vertical-rl;
+  font: var(--t-caps);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+}
+
+@media (min-width: 960px) {
+  .week-spines__no,
+  .week-spines__letter {
+    font: var(--t-label);
+  }
+}

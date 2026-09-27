@@ -1,0 +1,74 @@
+.pinpad {
+  display: grid;
+  gap: var(--s-2);
+  justify-items: start;
+}
+
+.pinpad__label {
+  font: var(--t-label);
+}
+
+.pinpad__field {
+  position: relative;
+  margin-top: var(--s-1);
+}
+
+/* The real input sits invisibly over the cells so taps, paste and the numeric keyboard all land on it. */
+.pinpad__input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  opacity: 0;
+  cursor: text;
+}
+
+.pinpad__cells {
+  display: flex;
+  gap: var(--s-3);
+  border-radius: var(--radius);
+}
+
+.pinpad__cell {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 64px;
+  border: 2px solid currentColor;
+  border-radius: var(--radius);
+  transition: box-shadow var(--dur-1) var(--ease-out);
+}
+
+.pinpad__cell--filled::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: currentColor;
+}
+
+.pinpad__input:focus + .pinpad__cells .pinpad__cell--next {
+  box-shadow: inset 0 -5px 0 currentColor;
+}
+
+.pinpad__input:focus-visible + .pinpad__cells {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.pinpad__error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  margin: 0;
+  font: var(--t-label);
+  color: var(--danger);
+}
+
+.pinpad__error svg {
+  flex: none;
+  margin-top: 1px;
+}

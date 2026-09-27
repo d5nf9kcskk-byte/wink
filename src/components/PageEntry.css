@@ -1,0 +1,144 @@
+.pageentry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+}
+
+.pageentry__label,
+.durationinput__legend {
+  display: block;
+  padding: 0;
+  margin: 0 0 var(--s-3);
+  font: var(--t-h2);
+}
+
+.pageentry__row {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.pageentry__input,
+.durationinput__input {
+  min-height: var(--tap);
+  padding: var(--s-1) var(--s-3);
+  border: 1px solid var(--ink-3);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font: var(--t-title);
+  font-variant-numeric: tabular-nums;
+  appearance: textfield;
+}
+
+.pageentry__input {
+  width: calc(4ch + 2 * var(--s-3));
+}
+
+.pageentry__input::-webkit-inner-spin-button,
+.pageentry__input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.pageentry__input[aria-invalid='true'],
+.durationinput__input[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.pageentry__hint {
+  margin: 0;
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+.durationinput + .pageentry__hint {
+  margin-top: var(--s-2);
+}
+
+.pageentry__steps {
+  display: flex;
+  gap: var(--s-2);
+  margin-inline-start: auto;
+}
+
+.pageentry__step {
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper);
+  transition: background var(--dur-1) var(--ease-out), color var(--dur-1) var(--ease-out);
+}
+
+.pageentry__step:active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.pageentry__error {
+  margin: calc(-1 * var(--s-2)) 0 0;
+  font: var(--t-label);
+  color: var(--danger);
+}
+
+.pageentry__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.pageentry__alt {
+  min-height: var(--tap);
+  padding: 0 var(--s-5);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  font: var(--t-label);
+  text-align: left;
+  transition: background var(--dur-1) var(--ease-out), color var(--dur-1) var(--ease-out);
+}
+
+.pageentry__alt:active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Hours + minutes */
+.durationinput {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.durationinput__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+}
+
+.durationinput__part {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font: var(--t-fact);
+  color: var(--ink-2);
+}
+
+.durationinput__input {
+  width: calc(3ch + 2 * var(--s-3));
+  font: var(--t-body);
+  color: var(--ink);
+}
+
+.durationinput:not(.durationinput--big) .durationinput__legend {
+  font: var(--t-label);
+  margin-bottom: var(--s-2);
+}
+
+.durationinput--big .durationinput__input {
+  font: var(--t-title);
+}

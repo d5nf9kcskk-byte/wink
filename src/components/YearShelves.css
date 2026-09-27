@@ -1,0 +1,137 @@
+.ys__grid {
+  display: grid;
+  gap: var(--s-4);
+}
+
+/* Every shelf shares one column count so spines line up down the bookcase. */
+.ys__spines,
+.ys__months {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 14), minmax(0, 1fr));
+}
+
+.ys__spines {
+  border-bottom: 2px solid var(--ink);
+}
+
+/* Each cell is the whole hit area (24px tall, a 14th of the shelf wide); the segment is drawn inside it. */
+.ys__spine {
+  display: grid;
+  grid-template-rows: repeat(7, 24px);
+}
+
+.ys__day {
+  position: relative;
+  /* Room for the focus ring, and clear of the tab bar and banner. */
+  scroll-margin: var(--s-2) var(--s-2) calc(var(--app-pad, 0px) + var(--s-2));
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ys__day::before {
+  content: '';
+  position: absolute;
+  inset: 1px 2px 0;
+  transition: transform var(--dur-1) var(--ease-out);
+}
+
+.ys__spine > .ys__day:first-child::before,
+.ys__day--absent + .ys__day:not(.ys__day--absent)::before {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* The global focus ring, raised over its neighbours so it stays whole and reads apart from the selection keyline. */
+.ys__day:focus-visible {
+  z-index: 1;
+}
+
+/* Streak days wear their book's endpaper like Home's spines; the accent keyline keeps each day 3:1 off the ground. */
+.ys__day--read::before,
+.ys__day--repaired::before {
+  background: var(--band-pattern, none), var(--band);
+  box-shadow: inset 0 0 0 1px var(--band-accent);
+}
+
+/* A reprint: the repair's grey carries a small R so the state never rests on colour alone. */
+.ys__day--repaired::before {
+  content: 'R';
+  display: grid;
+  place-items: center;
+  color: var(--band-on);
+  font: var(--t-spine);
+}
+
+.ys__day--grace::before {
+  border: 2px dashed var(--ink-2);
+}
+
+/* A run of empty days joins into one outlined spine with hairline day marks, so an empty stretch reads as an empty slot, not a grid. */
+.ys__day--missed::before {
+  border: 1px solid var(--ink-3);
+}
+
+.ys__day--missed + .ys__day--missed::before {
+  top: 0;
+  border-top: 0;
+}
+
+.ys__day--missed:has(+ .ys__day--missed)::before {
+  border-bottom-color: var(--rule);
+}
+
+.ys__day--future::before,
+.ys__day--before::before {
+  background: var(--ground-2);
+}
+
+.ys__day--today::before,
+.ys__day--pending::before {
+  border: 2px solid var(--ink);
+}
+
+.ys__day--absent {
+  cursor: default;
+}
+
+.ys__day--absent::before {
+  content: none;
+}
+
+.ys__day[aria-selected='true']::before {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+}
+
+:root[data-motion='full'] .ys__day[aria-selected='true']::before {
+  transform: translateY(-2px);
+}
+
+.ys__months {
+  padding-top: var(--s-1);
+  font: var(--t-spine);
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+/* Below 360px fourteen 24px targets can't fit, so the bookcase scrolls sideways within itself instead of shrinking them; the padding keeps focus and selection rings unclipped. */
+@media (max-width: 359px) {
+  .ys__grid {
+    grid-template-columns: max-content;
+    overflow-x: auto;
+    padding: var(--s-2);
+    margin: calc(-1 * var(--s-2));
+  }
+
+  .ys__spines,
+  .ys__months {
+    grid-template-columns: repeat(var(--cols, 14), 24px);
+  }
+}
+
+/* Tighter shelves on wide screens keep the whole bookcase in a 900px-tall window. */
+@media (min-width: 960px) {
+  .ys__grid {
+    gap: var(--s-3);
+  }
+}
